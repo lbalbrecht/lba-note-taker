@@ -147,6 +147,13 @@ const renderNoteList = async (notes) => {
 
       liEl.append(delBtnEl);
     }
+    if (spanEl.innerText === "") {
+      liEl.setAttribute("style", "visibility: hidden")
+    }
+    else {
+      liEl.removeAttribute("style", "visibility: hidden")
+      liEl.setAttribute("style", "visibility: visible")
+    }
 
     return liEl;
   };
