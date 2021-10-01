@@ -3,6 +3,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+let radios;
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -10,6 +11,7 @@ if (window.location.pathname === '/notes') {
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
+  radios = document.querySelectorAll(".form-check-input");
 }
 
 // Show an element
@@ -183,5 +185,14 @@ if (window.location.pathname === '/notes') {
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
+
+// Disable the categories if there is no text in the active note
+// const disableRadios =() => {
+  if (!activeNote.title && !activeNote.text) {
+    radios.setAttribute("disabled", "");
+  } else {
+    radios.setAttribute("disabled", false);
+  }
+// }
 
 getAndRenderNotes();

@@ -68,3 +68,42 @@ html, body {
   padding: 20px;
   cursor: pointer;
 }
+
+#note-info {
+  padding-left: 15px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #e4e4e4;
+}
+
+#note-info h2 {
+  text-indent: 15px;
+  color: #757575;
+}
+
+.info-row {
+  padding-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #e4e4e4;
+}
+
+#radios {
+  list-style: none;
+}
+
+#new-cat-row {
+  padding-left: 20px;
+
+}
+
+.new-category {
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+#date-check, #due-date {
+  padding-left: 20px;
+  padding-bottom: 15px;
+}

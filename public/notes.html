@@ -23,15 +23,83 @@
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4 list-container">
+      <div class="col-3 list-container">
         <div class="card">
           <ul class="list-group">
           </ul>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-6">
         <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
         <textarea class="note-textarea" placeholder="Note Text"></textarea>
+      </div>
+      <div class="col-3" id="note-info">
+        <div class="row">
+          <h2>Category</h2>
+        </div>
+        <div class="row">
+          <ul id="radios">
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="categoryRadios" id="category1" value="option1">
+                <label class="form-check-label" for="category1">
+                  None
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="categoryRadios" id="category1" value="option1">
+                <label class="form-check-label" for="category1">
+                  Work
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="categoryRadios" id="category2" value="option2">
+                <label class="form-check-label" for="category2">
+                  Housework
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="categoryRadios" id="category3" value="option3">
+                <label class="form-check-label" for="category3">
+                  Shopping
+                </label>
+              </div>
+            </li>
+            <!-- <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="categoryRadios" id="category3" value="option3">
+                <label class="form-check-label" for="category3">
+                </label>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+        <div class="row info-row" id="new-cat-row">
+          <input class="new-category" placeholder="New Category" maxlength="28" type="text">
+        </div>
+        <div class="row">
+          <h2>Due Date</h2>
+        </div>
+        <div class="row" id="date-check">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="no-date-check">
+            <label class="form-check-label" for="no-date-check">
+              No due date
+            </label>
+          </div>
+        </div>
+        <div class="row" id="due-date">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Enter due date</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="(dd/mm/yy)">
+          </div>
+        </div>
       </div>
     </div>
   </div>
