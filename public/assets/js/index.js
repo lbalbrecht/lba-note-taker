@@ -11,7 +11,7 @@ if (window.location.pathname === '/notes') {
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
-  radios = document.querySelectorAll(".form-check-input");
+  noteCat = document.querySelectorAll(".category-radio");
 }
 
 // Show an element
@@ -60,6 +60,7 @@ const renderActiveNote = () => {
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
+    noteCat.value = activeNote.category;
   } else {
     noteTitle.value = '';
     noteText.value = '';
@@ -70,6 +71,7 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
+    category: noteCat.value,
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
@@ -188,11 +190,22 @@ if (window.location.pathname === '/notes') {
 
 // Disable the categories if there is no text in the active note
 // const disableRadios =() => {
-  if (!activeNote.title && !activeNote.text) {
-    radios.setAttribute("disabled", "");
-  } else {
-    radios.setAttribute("disabled", false);
-  }
+  // if (!activeNote.title && !activeNote.text) {
+  //   radios.setAttribute("disabled", "");
+  // } else {
+  //   radios.setAttribute("disabled", false);
+  // }
 // }
+
+// const catList = document.querySelector("#radios");
+// const catEl = document.querySelectorAll(".category")
+// const addCat = document.querySelector(".new-category");
+
+// const newCategory =() => {
+//   catEl.innerHTML = addCat.val()
+//   catList.append(catEl)
+// }
+
+// addCat.addEventListener("submit", newCategory)
 
 getAndRenderNotes();

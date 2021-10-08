@@ -19,6 +19,7 @@ router.post('/api/notes', (req, res) => {
         const newNote = {
             title: req.body.title,
             text: req.body.text,
+            category: req.body.category,
             id: uniqid()
         }
         dbData.push(newNote)
